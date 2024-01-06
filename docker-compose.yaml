@@ -1,0 +1,17 @@
+version: '3'
+services:
+  minecraft:
+    build:
+      context: .
+      dockerfile: Dockerfile  # Nombre correcto de tu archivo Dockerfile
+    ports:
+      - "3000:25565"
+    volumes:
+      - "./data:/data"
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          memory: 2G
+        reservations:
+          memory: 1G
