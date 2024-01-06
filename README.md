@@ -27,7 +27,6 @@ Este repositorio aloja los archivos necesarios para desplegar un servidor de Min
   - Archivo: `Dockerfile`
     ```Dockerfile
     FROM openjdk:latest
-    LABEL maintainer="tumantenedor@example.com"
     WORKDIR /data
     RUN echo "eula=true" > eula.txt
     CMD ["java", "-Xmx1G", "-Xms1G", "-jar", "server.jar"]
